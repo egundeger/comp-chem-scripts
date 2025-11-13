@@ -147,11 +147,12 @@ def run_vina(config_file, output_file, log_file):
         True if successful, False otherwise
     """
     try:
+        # Note: Vina 1.2.x doesn't support --log parameter
+        # We capture output and write it manually
         cmd = [
             'vina',
             '--config', str(config_file),
-            '--out', str(output_file),
-            '--log', str(log_file)
+            '--out', str(output_file)
         ]
 
         result = subprocess.run(
@@ -161,11 +162,22 @@ def run_vina(config_file, output_file, log_file):
             timeout=3600  # 1 hour timeout
         )
 
+        # Write log file manually
+        with open(log_file, 'w') as f:
+            f.write("AutoDock Vina Output\n")
+            f.write("=" * 70 + "\n\n")
+            if result.stdout:
+                f.write(result.stdout)
+            if result.stderr:
+                f.write("\n\nStderr:\n")
+                f.write(result.stderr)
+
         if result.returncode == 0:
             return True
         else:
             print(f"    ✗ Vina failed with return code {result.returncode}")
-            print(f"    Error: {result.stderr}")
+            if result.stderr:
+                print(f"    Error: {result.stderr[:200]}")  # Show first 200 chars
             return False
 
     except FileNotFoundError:
