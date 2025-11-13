@@ -1,6 +1,12 @@
 # Ketamine Docking Pipeline
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/main/ketamine-docking/Ketamine_Docking_Colab.ipynb)
+
 Comprehensive molecular docking pipeline for investigating ketamine interactions with multiple protein targets.
+
+**🚀 Quick Start:**
+- **Google Colab** (no installation): Click badge above or see [Colab Guide](README_COLAB.md)
+- **Local Installation**: See instructions below
 
 ## Overview
 
