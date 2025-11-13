@@ -30,7 +30,8 @@ Thumbs.db
 
 # Jupyter notebooks
 .ipynb_checkpoints/
-*.ipynb
+# Keep Colab notebook
+!Ketamine_Docking_Colab.ipynb
 
 # Results and reports (large files)
 *.xlsx
