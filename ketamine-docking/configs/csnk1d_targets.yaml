@@ -1,0 +1,64 @@
+# CSNK1D (Casein Kinase 1 Delta) Docking Configuration
+# Priority 3: Wnt/β-catenin pathway involvement
+
+target_name: CSNK1D
+description: "Casein Kinase 1 Delta - Wnt/β-catenin pathway regulator"
+priority: 3
+
+structures:
+  6GZM:
+    description: "CSNK1D with inhibitor"
+    pdb_id: "6GZM"
+    # ATP-binding pocket
+    binding_site:
+      center_x: 0.0
+      center_y: 0.0
+      center_z: 0.0
+      size_x: 25.0
+      size_y: 25.0
+      size_z: 25.0
+      auto_detect: true  # Use co-crystallized inhibitor
+    key_residues:
+      - "Lys38"   # ATP binding
+      - "Asp149"  # Catalytic residue
+      - "Ile15"   # Hinge region
+      - "Leu85"   # Hydrophobic pocket
+    exhaustiveness: 24
+    num_modes: 15
+
+  5OKS:
+    description: "CSNK1D catalytic domain"
+    pdb_id: "5OKS"
+    binding_site:
+      center_x: 0.0
+      center_y: 0.0
+      center_z: 0.0
+      size_x: 25.0
+      size_y: 25.0
+      size_z: 25.0
+      auto_detect: true
+    exhaustiveness: 20
+    num_modes: 12
+
+# Alternative structures (if needed)
+alternative_structures:
+  # If specific CSNK1D structures are limited, can use homology models
+  # or other casein kinase family members
+  note: "May require homology modeling if structures insufficient"
+
+# Expected results
+expected_results:
+  binding_affinity_range: [-7.0, -4.0]  # kcal/mol (if any binding)
+  interpretation:
+    positive: "Direct inhibition of CSNK1D may affect Wnt signaling"
+    negative: "Downregulation likely through upstream mechanisms"
+    weak: "Indirect modulation through other pathway components"
+  pathway_context:
+    - "CSNK1D found downregulated in study"
+    - "Central role in Wnt/β-catenin signaling"
+    - "Phosphorylates β-catenin for degradation"
+    - "May explain developmental/growth effects"
+  notes:
+    - "Limited direct evidence for ketamine-CSNK1D interaction"
+    - "Docking helps evaluate direct vs. indirect mechanisms"
+    - "Homology modeling may be needed for better structures"

@@ -1,0 +1,55 @@
+# Ketamine Docking Pipeline - .gitignore
+
+# Data directories (large files)
+data/
+!data/.gitkeep
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Results and reports (large files)
+*.xlsx
+*.csv
+*.log
+
+# Molecular structure files (can be regenerated)
+*.pdbqt
+*.mol2
+*.sdf
+
+# Keep example configs
+!configs/*.yaml
+!requirements.txt
+!README.md
+!QUICKSTART.md
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/

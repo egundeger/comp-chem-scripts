@@ -1,0 +1,77 @@
+# EGFR Kinase Domain Docking Configuration
+# Priority 2: EGF expression significantly reduced in study
+
+target_name: EGFR
+description: "EGFR kinase domain - Investigating ketamine effect on EGF pathway"
+priority: 2
+
+structures:
+  4I24:
+    description: "EGFR kinase domain (wild-type)"
+    pdb_id: "4I24"
+    # ATP-binding site (primary target for kinase inhibitors)
+    binding_site:
+      center_x: 0.0
+      center_y: 0.0
+      center_z: 0.0
+      size_x: 25.0
+      size_y: 25.0
+      size_z: 25.0
+      auto_detect: true  # Will detect from any co-crystallized ligand
+      # ATP binding pocket
+      manual_center:
+        x: 24.0
+        y: 32.0
+        z: 42.0
+    key_residues:
+      - "Lys745"  # ATP binding
+      - "Met793"  # Gatekeeper residue
+      - "Thr790"  # Important for inhibitor binding
+      - "Leu844"
+      - "Thr854"
+    exhaustiveness: 24
+    num_modes: 15
+
+  4G5J:
+    description: "EGFR kinase + inhibitor complex"
+    pdb_id: "4G5J"
+    binding_site:
+      center_x: 0.0
+      center_y: 0.0
+      center_z: 0.0
+      size_x: 25.0
+      size_y: 25.0
+      size_z: 25.0
+      auto_detect: true  # Use co-crystallized inhibitor position
+    exhaustiveness: 24
+    num_modes: 15
+
+  2GS6:
+    description: "Active EGFR kinase domain"
+    pdb_id: "2GS6"
+    binding_site:
+      center_x: 0.0
+      center_y: 0.0
+      center_z: 0.0
+      size_x: 25.0
+      size_y: 25.0
+      size_z: 25.0
+      auto_detect: false
+      manual_center:
+        x: 25.0
+        y: 30.0
+        z: 40.0
+    exhaustiveness: 20
+    num_modes: 12
+
+# Expected results
+expected_results:
+  binding_affinity_range: [-7.0, -4.0]  # kcal/mol (if any binding)
+  interpretation:
+    positive: "Ketamine may directly inhibit EGFR kinase activity"
+    negative: "EGF downregulation likely through indirect mechanisms"
+    weak: "Weak binding suggests alternative pathway involvement"
+  study_context:
+    - "EGF expression significantly reduced"
+    - "Potential mechanism for anti-proliferative effects"
+    - "May explain some therapeutic benefits"

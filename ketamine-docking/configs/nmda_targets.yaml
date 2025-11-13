@@ -1,0 +1,73 @@
+# NMDA Receptor Docking Configuration
+# Priority 1: Primary ketamine target
+
+target_name: NMDA
+description: "NMDA Receptor GluN2B subunit - Primary ketamine binding site"
+priority: 1
+
+structures:
+  7EU8:
+    description: "GluN1-GluN2B + S-ketamine complex (human)"
+    pdb_id: "7EU8"
+    # Binding site from co-crystallized S-ketamine
+    # Channel blocker site coordinates
+    binding_site:
+      center_x: 0.0   # Will be auto-detected from ligand
+      center_y: 0.0
+      center_z: 0.0
+      size_x: 25.0
+      size_y: 25.0
+      size_z: 25.0
+      auto_detect: true  # Use co-crystallized ketamine position
+    key_residues:
+      - "Leu643"  # Important hydrophobic interaction
+      - "Asn616"  # Hydrogen bonding
+      - "Gln645"
+      - "Thr647"
+    exhaustiveness: 32  # High for best results
+    num_modes: 20
+
+  4PE5:
+    description: "GluN1a/GluN2B NMDA receptor"
+    pdb_id: "4PE5"
+    # Channel pore region
+    binding_site:
+      center_x: 0.0
+      center_y: 0.0
+      center_z: 0.0
+      size_x: 30.0
+      size_y: 30.0
+      size_z: 40.0
+      auto_detect: false
+      # Manual coordinates for channel blocker site (approximate)
+      manual_center:
+        x: 50.0
+        y: 50.0
+        z: 20.0
+    exhaustiveness: 24
+    num_modes: 15
+
+  5IPR:
+    description: "GluN1/GluN2B NMDA receptor"
+    pdb_id: "5IPR"
+    binding_site:
+      center_x: 0.0
+      center_y: 0.0
+      center_z: 0.0
+      size_x: 30.0
+      size_y: 30.0
+      size_z: 40.0
+      auto_detect: false
+    exhaustiveness: 24
+    num_modes: 15
+
+# Expected results
+expected_results:
+  binding_affinity_range: [-8.0, -6.0]  # kcal/mol
+  key_interactions:
+    - "Hydrophobic interactions with Leu643"
+    - "Hydrogen bonding with Asn616"
+    - "Channel blocker mechanism"
+  literature_reference:
+    - "PMID: 34853470 (7EU8 structure)"
+    - "Ketamine Ki ~0.5-2 μM at NMDA receptors"
