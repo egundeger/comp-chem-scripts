@@ -5,8 +5,26 @@
 Comprehensive molecular docking pipeline for investigating ketamine interactions with multiple protein targets.
 
 **🚀 Quick Start:**
-- **Google Colab** (no installation): Click badge above or see [Colab Guide](README_COLAB.md)
+- **Ketamine Docking** (no installation): [Open in Colab](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/main/ketamine-docking/Ketamine_Docking_Colab.ipynb) | [Guide](README_COLAB.md)
+- **FDA Drug Screening** (ZINC20): [Open in Colab](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/main/ketamine-docking/ZINC_FDA_Screening_Colab.ipynb) | [Guide](README_ZINC_SCREENING.md)
 - **Local Installation**: See instructions below
+
+## 📚 Available Pipelines
+
+### 1. Ketamine Docking Pipeline
+Focused docking study for ketamine against NMDA, EGFR, and CSNK1D targets.
+- Single ligand (ketamine enantiomers)
+- Multiple protein structures per target
+- Detailed binding site analysis
+- Literature validation
+
+### 2. ZINC20 FDA Drug Screening 🆕
+Large-scale virtual screening of FDA approved drugs.
+- 1000s of FDA approved compounds
+- Automated ligand preparation
+- Batch docking with ranking
+- Hit validation workflow
+- Drug repurposing applications
 
 ## Overview
 
