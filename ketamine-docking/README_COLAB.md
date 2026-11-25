@@ -9,7 +9,7 @@ Google Colab'da ketamin docking pipeline'ını çalıştırmak için hızlı kı
 1. **Colab'da aç:**
    - GitHub'dan bu repoyu aç
    - `ketamine-docking/Ketamine_Docking_Colab.ipynb` dosyasını Colab'da aç
-   - Veya direkt link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/main/ketamine-docking/Ketamine_Docking_Colab.ipynb)
+   - Veya direkt link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/master/ketamine-docking/Ketamine_Docking_Colab.ipynb)
 
 2. **Hücreleri sırayla çalıştır:**
    - Runtime → Run all (tümünü çalıştır)
@@ -27,7 +27,7 @@ Colab notebook'ta yeni bir hücre oluştur ve çalıştır:
 
 ```bash
 # Setup
-!bash <(curl -s https://raw.githubusercontent.com/egundeger/comp-chem-scripts/main/ketamine-docking/setup_colab.sh)
+!bash <(curl -s https://raw.githubusercontent.com/egundeger/comp-chem-scripts/master/ketamine-docking/setup_colab.sh)
 
 # Clone repo
 !git clone https://github.com/egundeger/comp-chem-scripts.git
@@ -338,7 +338,7 @@ for config_file in ['configs/nmda_targets.yaml', 'configs/egfr_targets.yaml', 'c
 
 ```python
 # Setup
-!bash <(curl -s https://raw.githubusercontent.com/egundeger/comp-chem-scripts/main/ketamine-docking/setup_colab.sh)
+!bash <(curl -s https://raw.githubusercontent.com/egundeger/comp-chem-scripts/master/ketamine-docking/setup_colab.sh)
 
 # Clone
 !git clone https://github.com/egundeger/comp-chem-scripts.git

@@ -1,12 +1,12 @@
 # Ketamine Docking Pipeline
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/main/ketamine-docking/Ketamine_Docking_Colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/master/ketamine-docking/Ketamine_Docking_Colab.ipynb)
 
 Comprehensive molecular docking pipeline for investigating ketamine interactions with multiple protein targets.
 
 **🚀 Quick Start:**
-- **Ketamine Docking** (no installation): [Open in Colab](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/main/ketamine-docking/Ketamine_Docking_Colab.ipynb) | [Guide](README_COLAB.md)
-- **FDA Drug Screening** (ZINC20): [Open in Colab](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/main/ketamine-docking/ZINC_FDA_Screening_Colab.ipynb) | [Guide](README_ZINC_SCREENING.md)
+- **Ketamine Docking** (no installation): [Open in Colab](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/master/ketamine-docking/Ketamine_Docking_Colab.ipynb) | [Guide](README_COLAB.md)
+- **FDA Drug Screening** (ZINC20): [Open in Colab](https://colab.research.google.com/github/egundeger/comp-chem-scripts/blob/master/ketamine-docking/ZINC_FDA_Screening_Colab.ipynb) | [Guide](README_ZINC_SCREENING.md)
 - **Local Installation**: See instructions below
 
 ## 📚 Available Pipelines
